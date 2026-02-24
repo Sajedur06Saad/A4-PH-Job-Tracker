@@ -15,7 +15,9 @@ iv. Only querySelectorAll() supports forEach() directly.
 2. How do you create and insert a new element into the DOM?
 
 To create a new element into the DOM we can use document.createElement() method. 
+
 For example:-
+
 const newElement = document.createElement(‘div’);
 ```html
 newElement.innerHTML =`
@@ -25,6 +27,7 @@ newElement.innerHTML =`
 `
 ```
 //inserting new element into existing element.
+
 const container = document.getElementById(‘container’);
 container.appendChild(newElement);
 
@@ -66,6 +69,7 @@ When the event occurs (for this example the button is clicked) the event begins 
 4. What is Event Delegation in JavaScript? Why is it useful?
 
 Event Delegation is a technique where a single parent element listens for events on its child elements, taking advantage of event bubbling to handle multiple child events efficiently.
+
 The HTML structure:
 
 ```html
