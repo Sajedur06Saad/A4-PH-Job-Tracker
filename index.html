@@ -24,25 +24,40 @@
 
 <body class="geist">
 
-    <header class="max-w-7xl mx-auto mt-16">
+    <header class="max-w-[80%] mx-auto mt-16">
         <h1 id="heading" class="font-bold text-4xl text-[#002c5cff] mb-5">Job Application Tracker</h1>
     </header>
-    <section id="counter section" class="text-[#002c5cff] max-w-7xl mx-auto grid grid-cols-3 gap-4">
+
+    <section id="counter section"
+        class="text-[#002c5cff] max-w-[80%] mx-auto grid sm:grid-cols-1 px-1 md:grid-cols-3  gap-4">
         <div id="total" class="bg-white shadow px-5 py-5 rounded-md ">
-            <p class="text-[14px] text-[#323b49FF]">Total</p>
+            <p class="text-[14px] text-[#323b49FF] font-semibold">Total</p>
             <p id="total-count" class="text-2xl font-bold">8</p>
         </div>
         <div id="total" class="bg-white shadow px-5 py-5 rounded-md ">
-            <p class="text-[14px] text-[#323b49FF]">Interview</p>
+            <p class="text-[14px] text-[#323b49FF] font-semibold">Interview</p>
             <p id="total-count" class="text-2xl text-green-500 font-bold">0</p>
         </div>
         <div id="total" class="bg-white shadow px-5 py-5 rounded-md ">
-            <p class="text-[14px] text-[#323b49FF]">Rejected</p>
+            <p class="text-[14px] text-[#323b49FF] font-semibold">Rejected</p>
             <p id="total-count" class="text-2xl text-red-500 font-bold">0</p>
         </div>
-        
-
     </section>
+    <hr class="max-w-[80%] mx-auto mt-5 text-gray-200">
+
+    <div id="banner" class="mt-5 mb-6 max-w-[80%] mx-auto flex justify-between">
+        <p class="text-[#002c5cff] text-[20px] font-semibold">Available Jobs</p>
+        <p class="text-[#323b49FF]">8 jobs</p>
+    </div>
+
+    <div id="all-jobs-counter" class="max-w-[80%] mx-auto">
+        <button class="btn btn-neutral">All</button>
+        <button class="btn btn-neutral">Interview</button>
+        <button class="btn btn-neutral">Rejected</button>
+    </div>
+
+
+
 </body>
 
 </html>
