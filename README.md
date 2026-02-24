@@ -11,15 +11,15 @@ iv. Only querySelectorAll() supports forEach() directly.
 2. How do you create and insert a new element into the DOM?
 To create a new element into the DOM we can use document.createElement() method. 
 For example:-
-const newElement = document.createElement('div');
+const newElement = document.createElement(‘div’);
 
 newElement.innerHTML =`
-&lth1&gtTitle&lt/h1&gt
-&ltp&gtparagraph text.&lt/p&gt
+<h1>Title</h1>
+<p>paragraph text.</p>
 // multi-line html can be inserted using backticks.
 `
 //inserting new element into existing element.
-const container = document.getElementById('container'’');
+const container = document.getElementById(‘container’);
 container.appendChild(newElement);
 
 
@@ -28,9 +28,9 @@ container.appendChild(newElement);
 Event Bubbling is a DOM mechanism where an event starts from the target element and propagates upward to its parent elements.
 
 The HTML structure: 
-&ltdiv id="parent"&gt
-&ltbutton id="child"&gtClick Me&lt/button&gt
-&lt/div&gt
+<div id="parent">
+<button id="child">Click Me</button>
+</div>
 And the JavaScript: 
 document.getElementById("child").addEventListener("click", function() {
 console.log("Child clicked");
@@ -54,14 +54,14 @@ When the event occurs (for this example the button is clicked) the event begins 
 4. What is Event Delegation in JavaScript? Why is it useful?
 Event Delegation is a technique where a single parent element listens for events on its child elements, taking advantage of event bubbling to handle multiple child events efficiently.
 The HTML structure:
-&ltul id="item-list"&gt
-  &ltli class="item"&gtHome&lt/li&gt
-  &ltli class="item"&gtAbout&lt/li&gt
-  &ltli class="item"&gtServices&lt/li&gt
-  &ltli class="item"&gtContact&lt/li&gt
-&lt/ul&gt
+<ul id="item-list">
+  <li class="item">Home</li>
+  <li class="item">About</li>
+  <li class="item">Services</li>
+  <li class="item">Contact</li>
+</ul>
 And the JavaScript:
-document.getElementById('item-list').addEventListener('click', function (event) {
+document.getElementById(‘item-list’).addEventListener(‘click’, function (event) {
 console.log(event.target);
 })
 When the event occurs by clicking a particular li element the element logged into the console. we don’t have to use individual event listeners to all the li elements.
